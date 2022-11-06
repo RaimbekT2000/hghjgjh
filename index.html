@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-sclable=0">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap');
+
+      #contacts {
+        width: 100%;
+        float: left;
+        padding-bottom: 40px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px auto;
+      }
+
+      @media (max-width:1000px){
+          #contacts {
+            font-size: 2em;
+            width:100%;
+          }
+      }
+
+      @media (max-width:1000px) and (max-width:651px){
+          #contacts {
+            font-size: 100%;
+          }
+      }
+
+      @media (max-width:651px) and (max-width:400px){
+          #contacts {
+            font-size: 100%;
+          }
+      }
+
+      h1, h2, h3, h4, h5 {
+        font-family: 'Roboto Greek', serif;
+        font-weight: lighter;
+      } 
+
+      #contacts h5 {font-size: 3em; color: #4f4f4f}
+
+      #form_input {
+        margin-top: 5%;
+        width: 350px;
+        margin-left: 10%;
+        font-size: 1.1em;
+        text-align: center;
+        margin: 0px auto;
+      }
+
+      @media (max-width: 400px) {
+          #form_input {
+              width: 100%;
+              font-size: 0.8em;
+          }
+      }
+
+      #form_input label {
+        color: #505050;
+        cursor: pointer;
+        font-size: 1.4em;
+        font-family: 'Roboto Greek' , serif;
+        margin-left: 13%;
+        float: left;
+      }
+
+      #form_input label > span {
+        color: #e87e7e;
+      }
+
+      #form_input input,#form_input textarea {
+        margin-bottom: 10px;
+        width: 70%;
+        padding: 10px 2%;
+        border-radius: 7px;
+        border: 2px solid silver;
+        font-size: 1.5em;
+      }
+
+      #form_input input:focus, #form_input textarea:focus {
+          border-color: #343434;
+      }
+
+      .btn {
+        float: left;
+        border-radius: 5px;
+        padding: 5px 9px;
+        font-size: 1.2em;
+        background-color: #ec6550;
+        text-shadow: #454545 0 0 2px;
+        cursor: pointer;
+        color: white;
+        font-family: 'Roboto Greek', serif;
+        text-align: center;
+        margin-left: 12.5%;
+      }
+
+      .btn:hover {
+        background-color: #c15443;
+        text-align: center;
+      }
+
+
+    </style>
+</head>
+<body>
+   <div id="contacts">
+        <form id="form_input">
+            <label for="name">Name<span>*</span></label><br>
+            <input type="text" placeholder="Enter your name" name="name" id="usernamee"><br>
+            <label for="email">Email<span>*</span></label><br>
+            <input type="email" placeholder="Enter your email" name="email" id="email"><br>
+            <input type="submit" value="Get access to training" onclick="AddRow()" class="btn"/>
+        </form><br>
+    </div>
+    <script>
+      function AddRow()
+      {
+        var usernamee = document.getElementById("usernamee").value;
+        var email = document.getElementById("email").value;
+        if (usernamee==""|| email=="") {
+          return false;
+        }
+        else {
+        google.script.run.AddRecord(usernamee,passwordd,email,phone);
+        document.getElementById("contacts");
+        window.open("https://www.digistore24.com/redir/300124/Raimbek290900120705/John_Crestani");
+      }
+      }
+
+      function LoginUser()
+      {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      google.script.run.withSuccessHandler(function(output)
+      {
+        if(output == 'TRUE')
+        {
+          document.getElementById("displayusername").innerHTML = username;
+          document.getElementById("page1_id1").className = "page1_class1-off";
+          document.getElementById("page4_id1").className = "page4_id1";    
+        }
+        else if(output == 'FALSE')
+        {
+          document.getElementById("errorMessage").innerHTML = "Invalid data";     
+        }    
+      }).checkLogin(username);
+      }
+      
+      function function1(){
+        document.getElementById("page1_id1").className = "page1_class1-off";
+        document.getElementById("page2_id1").className = "page2_id1";
+      }
+      
+      function function3(){ 
+        document.getElementById("page3_id1").className = "page3_id1-off";
+        document.getElementById("page1_id1").className = "page1_id1"; 
+      }
+    </script> 
+</body>
+</html>
