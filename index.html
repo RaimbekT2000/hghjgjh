@@ -2,162 +2,444 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-sclable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap');
 
-      #contacts {
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: Trebuchet MS, Helvetica;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0.5% 0px 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+header #logo {
+    color: #fff;
+    cursor: pointer;
+}
+
+header #logo span {
+    font-size: 1.7em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Suez One', serif;
+}
+
+@media (min-width: 701px) {
+    #logo {
+        margin-top: 15px;
         width: 100%;
-        float: left;
-        padding-bottom: 40px;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0px auto;
-      }
-
-      @media (max-width:1000px){
-          #contacts {
-            font-size: 2em;
-            width:100%;
-          }
-      }
-
-      @media (max-width:1000px) and (max-width:651px){
-          #contacts {
-            font-size: 100%;
-          }
-      }
-
-      @media (max-width:651px) and (max-width:400px){
-          #contacts {
-            font-size: 100%;
-          }
-      }
-
-      h1, h2, h3, h4, h5 {
-        font-family: 'Roboto Greek', serif;
-        font-weight: lighter;
-      } 
-
-      #contacts h5 {font-size: 3em; color: #4f4f4f}
-
-      #form_input {
-        margin-top: 5%;
-        width: 350px;
-        margin-left: 10%;
-        font-size: 1.1em;
-        text-align: center;
-        margin: 0px auto;
-      }
-
-      @media (max-width: 400px) {
-          #form_input {
-              width: 100%;
-              font-size: 0.8em;
-          }
-      }
-
-      #form_input label {
-        color: #505050;
-        cursor: pointer;
-        font-size: 1.4em;
-        font-family: 'Roboto Greek' , serif;
-        margin-left: 13%;
-        float: left;
-      }
-
-      #form_input label > span {
-        color: #e87e7e;
-      }
-
-      #form_input input,#form_input textarea {
-        margin-bottom: 10px;
-        width: 70%;
-        padding: 10px 2%;
-        border-radius: 7px;
-        border: 2px solid silver;
         font-size: 1.5em;
-      }
-
-      #form_input input:focus, #form_input textarea:focus {
-          border-color: #343434;
-      }
-
-      .btn {
+    }
+    #about {
         float: left;
-        border-radius: 5px;
-        padding: 5px 9px;
-        font-size: 1.2em;
-        background-color: #ec6550;
-        text-shadow: #454545 0 0 2px;
-        cursor: pointer;
-        color: white;
-        font-family: 'Roboto Greek', serif;
-        text-align: center;
-        margin-left: 12.5%;
-      }
+        width: 100%;
+    }
+}
 
-      .btn:hover {
-        background-color: #c15443;
-        text-align: center;
-      }
+#about {
+    text-align: center;
+    font-size: 1em;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
 
+#about > a {color: #fff}
 
+#about > a:hover {
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+#about > a:not(:last-child) {
+    margin-right: 7%;
+}
+
+.fixed {
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo {
+    color: #343434;
+}
+
+.fixed #about a {color: #343434}
+.fixed #about a:hover {color: #7c7c7c}
+
+#top {
+    width: 100%;
+    height: 1000px;
+    background-image: url(https://bit.ly/2W8w0IX);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+}
+
+@media (min-width: 1001px) {
+    #top {
+        font-size: 3em;
+        height: 1000px;
+    }
+}
+
+@media (min-width: 1000px) and(min-width: 651px) {
+    #top {
+        font-size: 2em;
+        height: 600px;
+    }
+}
+
+@media (max-width: 650px) {
+    #top {
+        font-size: 1.3em;
+        padding-top: 50%;
+        height: 500px;
+    }
+}
+
+#top h1 {
+    padding-top: 20%;
+}
+
+#top h3 {
+    color: #ccc;
+}
+
+#main {
+    padding: 100px 20%;
+    width: 60%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid silver;
+    color: #484848;
+    font-size: 1.3em;
+}
+
+@media (min-width: 1401px) {
+    #main {
+        padding: 100px 20%;
+        width: 60%;
+    }
+}
+
+@media (min-width: 1400px) {
+    #main {
+        padding: 100px 10%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 700px) {
+    #main {
+        width: 98%! important;
+        margin-bottom: 20px;
+    }
+}
+
+#main div {
+    width: 48%;
+    margin-right: 10%;
+    float: left;
+}
+
+#main h2 {font-size: 2em}
+#main span {color: #a0a0a0}
+#overview {
+    float: left;
+    background-image: url(https://bit.ly/3rRWZVd);
+    background-blend-mode: multiply;
+    background-color: #4f1c75;
+    background-size: cover;
+    background-attachment: fixed;
+
+    padding: 100px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+#overview h2 {font-size: 4em;}
+#overview h4 {color: #ccc; font-size: 1.5em;}
+
+#overview .img {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+#overview .img:nth-child(odd) {
+    margin-left: 18%;
+}
+
+#overview img {
+    background: #fafafa;
+    padding: 5px;
+    border: 2px solid silver;
+    float: left;
+    width: 100%;
+    max-width: 500px;
+}
+
+#overview span {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+    margin-top: 10px;
+}
+#contacts {
+    width: 100%;
+    float: left;
+    padding-bottom: 40px;
+    padding-top: 70px;
+    border-top: 4px solid #ccc;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto Greek', serif;
+    font-weight: lighter;
+} 
+
+#contacts h5 {font-size: 3em; color: #4f4f4f}
+
+#form_input {
+    margin-top: 15px;
+    width: 35%;
+    margin-left: 34%;
+    font-size: 1.1em;
+}
+
+#form_input label {
+    color: #505050;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-family: 'Roboto Greek' , serif;
+    margin-left: 13%;
+    float: left;
+}
+
+#form_input label > span {
+    color: #e87e7e;
+}
+
+#form_input input,#form_input textarea {
+    margin-bottom: 10px;
+    width: 70%;
+    padding: 10px 2%;
+    border-radius: 7px;
+    border: 2px solid silver;
+    font-size: 0.9em;
+    color: #4a4a4a;
+}
+
+#form_input input:focus, #form_input textarea:focus {
+    border-color: #343434;
+}
+
+.btn {
+    float: left;
+    border-radius: 5px;
+    padding: 5px 9px;
+    font-size: 1.2em;
+    background-color: #ec6550;
+    text-shadow: #454545 0 0 2px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Roboto Greek', serif;
+    text-align: center;
+    margin-left: 12.5%;
+}
+
+.btn:hover {
+    background-color: #c15443;
+    text-align: center;
+}
+
+#faq {
+    background-color: #fff;
+    border-top: 2px dashed #e4e3e3;
+    width: 100%;
+    float: left;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#faq div {
+    width: 25%;
+    margin-left: 6%;
+    float: left;
+}
+
+@media (max-width: 801px) {
+    #faq div {
+        width: 25%;
+        margin-left: 6%;
+        float: left;
+    }
+}
+
+@media (max-width: 800px) {
+    #faq div {
+        width: 80%;
+        margin-left: 10%;
+        float: left;
+    }
+}
+
+#faq .title {
+    font-weight: lighter;
+    color: #a3a0ad;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+#faq .heading {
+    color: #7d7d7d;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#faq p {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #4a4a4a;
+    font-size: 0.95em;
+    margin-bottom: 40px;
+}
     </style>
 </head>
 <body>
+   <header>
+       <div id="logo" onclick="slowScroll('#top')">
+            <span>Proxy</span>
+       </div>
+       <div id="about">
+           <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+           <a href="#" title="Преимущества" onclick="slowScroll('overview')">Преимущества</a>
+           <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+           <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+       </div>
+   </header>
+   <div id="top">
+       <h1>Программирование</h1>
+       <h3>как способ жизни!</h3>
+   </div>
+   <div id="main">
+        <div class="intro">
+            <h2>Наши услуги помогут вам!</h2>
+            <span>Большой выбор всего, что может вам пригодится!</span>
+        </div>
+        <div class="text">
+            <span>glkjhkgjkbnkjdfnjkgjlnjkdfnbjkdfjkhndgjkgndfbfddfhdfhdfhdfhdfhd
+            jksdfnbjksdglkgmklngjksfdnjkgnfbjkdfnbjkdfnjkbnfbjfdnjkdfghghdghdhdfbhdf
+            dfgdfhfdhdfhdfhdfhdfhhhhhhhhhhhhhhhhhhhhfhdhdfhfdhdghfgbdfsgfdnbdfhdfh
+            dfhdfhdfhdfhdfhdfhdfhdfhdf</span>
+        </div>
+   </div>
+
+   <div id="overview">
+        <h2>Преимущества</h2>
+        <h4>С нами все проще</h4>
+        <div class="img">
+            <img src="610.png" alt="">
+            <span>Изучение языка Ruby для начинающих</span>
+        </div>
+        <div class="img">
+            <img src="611.png" alt="">
+            <span>Уроки Photoshop для начинающих</span>
+        </div>
+        <div class="img">
+            <img src="615.png" alt="">
+            <span>Уроки Swift для начинающих</span>
+        </div>
+        <div class="img">
+            <img src="613.png" alt="">
+            <span>Создание игры на Python 3 с PyGame</span>
+        </div>
+   </div>
+
    <div id="contacts">
+        <center><h5>Обратная связь</h5></center>
         <form id="form_input">
-            <label for="name">Name<span>*</span></label><br>
-            <input type="text" placeholder="Enter your name" name="name" id="usernamee"><br>
-            <label for="email">Email<span>*</span></label><br>
-            <input type="email" placeholder="Enter your email" name="email" id="email"><br>
-            <input type="submit" value="Get access to training" onclick="AddRow()" class="btn"/>
+            <label for="name">Имя <span>*</span></label><br>
+            <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+            <label for="email">Ваша почта <span>*</span></label><br>
+            <input type="email" placeholder="Введите email" name="email" id="email"><br>
+            <label for="message">Сообщение <span>*</span></label><br>
+            <input type="text" placeholder="Введите ваше Сообщение" name="message" id="message"></textarea><br>
+            <div id="mess_send" class="btn">Отправить</div>
         </form><br>
     </div>
-    <script>
-      function AddRow()
-      {
-        var usernamee = document.getElementById("usernamee").value;
-        var email = document.getElementById("email").value;
-        if (usernamee==""|| email=="") {
-          return false;
-        }
-        else {
-        window.open("https://www.digistore24.com/redir/300124/Raimbek290900120705/John_Crestani");
-      }
-      }
 
-      function LoginUser()
-      {
-      var username = document.getElementById("username").value;
-      var password = document.getElementById("password").value;
-      google.script.run.withSuccessHandler(function(output)
-      {
-        if(output == 'TRUE')
-        {
-          document.getElementById("displayusername").innerHTML = username;
-          document.getElementById("page1_id1").className = "page1_class1-off";
-          document.getElementById("page4_id1").className = "page4_id1";    
-        }
-        else if(output == 'FALSE')
-        {
-          document.getElementById("errorMessage").innerHTML = "Invalid data";     
-        }    
-      }).checkLogin(username);
-      }
-      
-      function function1(){
-        document.getElementById("page1_id1").className = "page1_class1-off";
-        document.getElementById("page2_id1").className = "page2_id1";
-      }
-      
-      function function3(){ 
-        document.getElementById("page3_id1").className = "page3_id1-off";
-        document.getElementById("page1_id1").className = "page1_id1"; 
-      }
-    </script> 
+    <div id="faq">
+        <div>
+            <span class="title">Оплата</span><br>
+            <span class="heading">Как будет оплата?</span>
+            <p>Оплата будет проходить по инструкции</p>
+            <span class="heading">Как будет оплата?</span>
+            <p>Оплата будет проходить по инструкции</p>
+            <span class="heading">Как будет оплата?</span>
+            <p>Оплата будет проходить по инструкции</p>
+        </div>
+        <div>
+            <span class="title">Информация</span><br>
+            <span class="heading">Что входит в услуги сервиса?</span>
+            <p>В услуги сервиса входит все необходимые компоненты для работы</p>
+            <span class="heading">Что входит в услуги сервиса?</span>
+            <p>В услуги сервиса входит все необходимые компоненты для работы</p>
+            <span class="heading">Что входит в услуги сервиса?</span>
+            <p>В услуги сервиса входит все необходимые компоненты для работы</p>
+        </div>
+        <div>
+            <span class="title">Гарантии</span><br>
+            <span class="heading">Какие гарантии есть?</span>
+            <p>Есть гарантия возврата средств</p>
+            <span class="heading">Какие гарантии есть?</span>
+            <p>Есть гарантия возврата средств</p>
+            <span class="heading">Какие гарантии есть?</span>
+            <p>Есть гарантия возврата средств</p>
+        </div>
+    </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script>
+       function functionScroll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500)
+       }
+
+       $(document).on("scroll", function() {
+          if($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+          else
+            $("header").attr("class","fixed");     
+       });
+   </script> 
 </body>
 </html>
